@@ -1,20 +1,34 @@
 @if (pageData$ | async; as page) {
-<main class="main">
+
     @for (section of page.Sections; track section.id || $index) {
-    <section class="section-wrapper">
-        @switch (section.type) {
-            @case ('header') { <app-header data="section"></app-header>}
-            @case ('sectionHero') { <app-hero data="section"></app-hero>}
-            @case ('sectionBenefits') { <app-benefits data="section"></app-benefits>}
-            @case ('sectionFounder') { <app-founder data="section"></app-founder>}
-            @case ('sectionHowToOrder') { <app-hero data="section"></app-hero>}
-            @case ('sectionReviews') { <app-reviews data="section"></app-reviews>}
-            @case ('sectionFaq') { <app-faq data="section"></app-faq>}
-            @case ('sectionInfoBanner') { <app-info-banner data="section"></app-info-banner>}
-            @case ('sectionFinal') { <app-final data="section"></app-final>}
-            @case ('sectionFooter') { <app-footer data="section"></app-footer>}
-        }
-    </section>
+      @if (section.type === 'header') {
+        <app-header [data]="section" />
+      }
     }
-</main>
-}
+  
+    <main class="main-content">
+      @for (section of page.Sections; track section.id || $index) {
+        @if (section.type !== 'header' && section.type !== 'sectionFooter') {
+          
+          @switch (section.type) {
+            @case ('sectionHero') { <app-hero [data]="section" /> }
+            @case ('sectionBenefits') { <app-benefits [data]="section" /> }
+            @case ('sectionFounder') { <app-founder [data]="section" /> }
+            @case ('sectionHowToOrder') { <app-hero [data]="section" /> }
+            @case ('sectionReviews') { <app-reviews [data]="section" /> }
+            @case ('sectionFaq') { <app-faq [data]="section" /> }
+            @case ('sectionInfoBanner') { <app-info-banner [data]="section" /> }
+            @case ('sectionFinal') { <app-final [data]="section" /> }
+          }
+  
+        }
+      }
+    </main>
+  
+    @for (section of page.Sections; track section.id || $index) {
+      @if (section.type === 'sectionFooter') {
+        <app-footer [data]="section" />
+      }
+    }
+  
+  }

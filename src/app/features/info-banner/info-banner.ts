@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-info-banner',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './info-banner.scss',
 })
 export class InfoBanner {
-
+  @Input() data: any;
 }
