@@ -1,0 +1,20 @@
+@if (pageData$ | async; as page) {
+<main class="main">
+    @for (section of page.Sections; track section.id || $index) {
+    <section class="section-wrapper">
+        @switch (section.type) {
+            @case ('header') { <app-header data="section"></app-header>}
+            @case ('sectionHero') { <app-hero data="section"></app-hero>}
+            @case ('sectionBenefits') { <app-benefits data="section"></app-benefits>}
+            @case ('sectionFounder') { <app-founder data="section"></app-founder>}
+            @case ('sectionHowToOrder') { <app-hero data="section"></app-hero>}
+            @case ('sectionReviews') { <app-reviews data="section"></app-reviews>}
+            @case ('sectionFaq') { <app-faq data="section"></app-faq>}
+            @case ('sectionInfoBanner') { <app-info-banner data="section"></app-info-banner>}
+            @case ('sectionFinal') { <app-final data="section"></app-final>}
+            @case ('sectionFooter') { <app-footer data="section"></app-footer>}
+        }
+    </section>
+    }
+</main>
+}

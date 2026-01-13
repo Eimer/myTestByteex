@@ -1,7 +1,5 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ApiService } from './core/services/api.service';
-import { map, tap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,15 +9,4 @@ import { map, tap } from 'rxjs';
 })
 export class App {
 
-  private _apiService = inject(ApiService);
-
-  ngOnInit(): void {
-    this._apiService.getEntries('landingPage')
-      .pipe(
-        map(response => {
-          return response;
-        })
-      )
-      .subscribe();
-  }
 }
