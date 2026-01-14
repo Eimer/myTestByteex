@@ -11,10 +11,11 @@ import { Faq } from '../faq/faq';
 import { InfoBanner } from '../info-banner/info-banner';
 import { Final } from '../final/final';
 import { Footer } from '../../layout/footer/footer';
+import { HowWorks } from '../how-works/how-works';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, Header, Hero, Founder, Benefits, Reviews, Faq, InfoBanner, Final, Footer],
+  imports: [CommonModule, Header, Hero, Founder, Benefits, Reviews, Faq, InfoBanner, Final, Footer, HowWorks],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

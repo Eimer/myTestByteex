@@ -1,0 +1,54 @@
+<section class="hero section-wrapper max-width flex-column br-bx">
+
+    <div class="hero__top flex-row">
+        <img class="hero__logo" src="/images/logo.png" alt="logo">
+    </div>
+
+    <div class="hero__content flex-row">
+
+
+        <div class="hero__left flex-column">
+            <h2 class="hero__title">{{data.title}}</h2>
+            <img class="mb-show" [src]="data.image" alt="banner">
+            <div class="hero__subtitle-list flex-column">
+                @for (subtitile of data.subtitile; track subtitile; let i = $index) {
+                <div class="hero__subtitle-item flex-row items-center">
+                    <img [src]="subtitile.icon" alt="icon">
+                    <p>{{subtitile.title}}</p>
+                </div>
+                }
+            </div>
+
+            <div class="hero__action flex-row items-center">
+                <a class="btn"><span>{{data.titlebtn}}</span><img src="/icons/arrow.svg" alt="arrow"></a>
+            </div>
+
+            <div class="hero__review review-card flex-column br-bx">
+
+                <div class="review-card__header flex-row justify-between items-center">
+                    <img class="review-card__icon" [src]="data.reviewImage" alt="icon">
+
+                    <div class="review-card__info flex-row items-center">
+                        <p class="review-card__user-name">{{data.reviewTitile}}</p>
+                        <div class="review-card__user-row flex-row items-center">
+
+                            <app-stars></app-stars>
+                            <span class="review-card__meta">{{data.reviewSubtitle}}</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="review-card__body">
+                    <p class="review-card__text">{{data.reviewText}}</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hero__right mb-hide">
+            <img [src]="data.image" alt="banner">
+        </div>
+    </div>
+
+</section>

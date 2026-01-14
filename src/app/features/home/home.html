@@ -6,7 +6,7 @@
       }
     }
   
-    <main class="main-content">
+    <main class="main-content flex-column items-center p-main">
       @for (section of page.Sections; track section.id || $index) {
         @if (section.type !== 'header' && section.type !== 'sectionFooter') {
           
@@ -14,7 +14,7 @@
             @case ('sectionHero') { <app-hero [data]="section" /> }
             @case ('sectionBenefits') { <app-benefits [data]="section" /> }
             @case ('sectionFounder') { <app-founder [data]="section" /> }
-            @case ('sectionHowToOrder') { <app-hero [data]="section" /> }
+            @case ('sectionHowToOrder') { <app-how-works [data]="section" /> }
             @case ('sectionReviews') { <app-reviews [data]="section" /> }
             @case ('sectionFaq') { <app-faq [data]="section" /> }
             @case ('sectionInfoBanner') { <app-info-banner [data]="section" /> }
