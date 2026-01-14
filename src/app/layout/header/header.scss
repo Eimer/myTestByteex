@@ -1,0 +1,11 @@
+.header {
+    height: 36px;
+    padding: 2px;
+    background-color: var(--bg-first);
+
+    &_text {
+        font-family: var(--main-font);
+        color: #565656;
+        text-transform: uppercase;
+    }
+}

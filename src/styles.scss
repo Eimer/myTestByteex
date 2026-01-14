@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'suisseIntl';
+    src: url('/fonts/suisse-intl-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'sofiaPro';
+    src: url('/fonts/sofia-pro-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --bg-first: #F9F0E5;
+    --bg-second: #F9F0E5;
+    --main-font: 'suisseIntl', sans-serif;
+    --secondary-font: 'sofiaPro', sans-serif;
+}
+
+
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.max-width {
+    width: 100%;
+    max-width: 1250px;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.mb-show {
+    display: none;
+}
+
+.mb-hide {
+    display: block;
+}
+
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.ls-2 {
+    letter-spacing: 2px;
+}
+
+.fs-11 {
+    font-size: 11px;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+    .mb-hide {
+        display: none;
+    }
+
+    .mb-show {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {}
