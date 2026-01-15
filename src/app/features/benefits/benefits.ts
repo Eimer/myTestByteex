@@ -1,9 +1,10 @@
 import { Component, Input, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CustomSlider } from '../../shared/custom-slider/custom-slider';
+import { Stars } from '../../shared/stars/stars';
 
 @Component({
   selector: 'app-benefits',
-  imports: [CustomSlider],
+  imports: [CustomSlider, Stars],
   templateUrl: './benefits.html',
   styleUrl: './benefits.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

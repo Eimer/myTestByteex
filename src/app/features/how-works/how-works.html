@@ -1,0 +1,40 @@
+<section class="how-works section-wrapper flex-column-center br-bx p-main max-width">
+    <h2>{{data.title}}</h2>
+    <div class="how-works__content flex-row mb-hide">
+        @for (item of data.items; track item; let i = $index) {
+        <div class="how-works__card flex-column items-center justify-center t-center">
+            <img class="how-works__card-img" [src]="item.image" alt="icon">
+            <h3>{{item.title}}</h3>
+            <p>{{item.text}}</p>
+        </div>
+        }
+
+    </div>
+
+    <div class="how-works__mob-content mb-show flex-row" style="overflow: hidden;">
+        <app-custom-slider [config]="sliderConfig">
+            @for (slideritem of data.items; track slideritem) {
+            <swiper-slide>
+
+                <div class="how-works__card flex-column items-center justify-center t-center">
+                    <img class="how-works__card-img" [src]="slideritem.image" alt="icon">
+                    <h3>{{slideritem.title}}</h3>
+                    <p>{{slideritem.text}}</p>
+                </div>
+
+            </swiper-slide>
+        }
+        </app-custom-slider>
+    </div>
+
+    <div class="how-works__actions flex-column max-width items-center">
+        <div class="how-works__action flex-row items-center mb-show max-width justify-center">
+            <a class="btn"><span>{{data.titlebtn}}</span><img src="/icons/arrow.svg" alt="arrow"></a>
+        </div>
+        <div class="how-works__tip flex-row items-center mb-show items-center justify-center">
+            <app-stars></app-stars>
+            <span>{{data.subtitile}}</span>
+        </div>
+    </div>
+
+</section>

@@ -23,7 +23,7 @@
         <div class="benefits__content flex-row items-center justify-between">
             <div class="benefits__left flex-column">
                 <h2>{{data.header}}</h2>
-                <div class="benefits__mob-right flex-row mb-show"  style="overflow: hidden;">
+                <div class="benefits__mob-right flex-row mb-show" style="overflow: hidden;">
                     <app-custom-slider [config]="previewSliderConfig">
                         @for (sliderImage of data.sliderImages; track $index) {
                         <swiper-slide>
@@ -33,7 +33,7 @@
                     </app-custom-slider>
                 </div>
                 <div class="benefits__left-list flex-column">
-                    
+
                     @for(item of data.itemList; track item; let last = $last ) {
                     <div class="benefits__item flex-row">
 
@@ -46,14 +46,23 @@
 
                     </div>
                     @if (!last) {
-                        <div class="delim br-bx mb-show"></div>
+                    <div class="delim br-bx mb-show"></div>
                     }
-                    
+
                     }
                 </div>
+
+                <div class="benefits__action flex-row items-center mb-show">
+                    <a class="btn"><span>{{data.titlebtn}}</span><img src="/icons/arrow.svg" alt="arrow"></a>
+                </div>
+                <div class="benefits__tip flex-row items-center mb-show items-center justify-center">
+                    <app-stars></app-stars>
+                    <span>{{data.subtitile}}</span>
+                </div>
+
             </div>
 
-            <div class="benefits__right flex-row mb-hide"  style="overflow: hidden;">
+            <div class="benefits__right flex-row mb-hide" style="overflow: hidden;">
                 <app-custom-slider [config]="previewSliderConfig">
                     @for (sliderImage of data.sliderImages; track $index) {
                     <swiper-slide>

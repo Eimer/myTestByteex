@@ -1,0 +1,63 @@
+:host {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.how-works {
+    gap: 45px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    &__content {
+        gap: 41px;
+    }
+
+    &__card {
+        gap: 19px;
+        padding: 77px 35px;
+        border: 1px solid var(--border-color-main);
+
+        &:nth-child(odd) {
+            background-color: #F0EEEF;
+        }
+
+        &:nth-child(even) {
+            background-color: #F9F0E6;
+        }
+
+    }
+
+    &__card-img {
+        height: 49px;
+        width: auto;
+    }
+
+    &__tip {
+        display: flex !important;
+        gap: 15px;
+    }
+
+    &__actions {
+        gap: 11px;
+    }
+
+    &__mob-content {
+        width: 100%;
+        max-width: 290px;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .how-works {
+
+        &__action {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
