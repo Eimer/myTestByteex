@@ -1,0 +1,155 @@
+:host {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.benefits {
+    width: 100%;
+    background: linear-gradient(180deg, #F9F0E5 0%, rgba(249, 240, 229, 0.18) 43.05%, rgba(249, 240, 229, 0) 100%);
+
+    &__partners {
+
+        padding-top: 77px;
+        gap: 40px;
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 23px;
+        color: #868787;
+    }
+
+    &__partners-list {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    &__partner {
+        height: 40px;
+        width: auto;
+    }
+
+
+    // Our elements for slider
+    &__partner-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+    }
+
+    &__partner-img {
+        max-width: 100%;
+        width: auto;
+        height: 35px;
+        object-fit: contain;
+        filter: grayscale(100%);
+        transition: all 0.4s ease;
+
+        &:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+    }
+
+    &__content {
+        margin-top: 80px;
+        padding-bottom: 90px;
+    }
+
+    &__left {
+        flex: 1;
+    }
+
+    &__item {
+        gap: 32px;
+    }
+
+    &__left-list {
+        padding-top: 85px;
+        gap: 18px;
+    }
+
+    &__item-content {
+        gap: 14px;
+    }
+
+    &__item-img {
+        width: 42px;
+        height: 42px;
+    }
+
+    &__right {
+        flex: 1;
+        min-width: 0;
+        width: 100%;
+        justify-content: flex-end;
+
+        app-custom-slider {
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+
+    &__mob-right {
+        display: none;
+        min-width: 0;
+        width: 100%;
+        justify-content: center;
+
+        app-custom-slider {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .sliderMobImage {
+            &__img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+
+    }
+
+    .sliderImage {
+        &__img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .delim {
+        width: 100%;
+        background-color: #C4C4C480;
+        height: 1px;
+        margin: 30px 0 30px 0;
+        max-width: 335px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .benefits {
+        &__content {
+            margin-top: unset;
+        }
+
+        &__left {
+            h2 {
+                margin-bottom: 25px;
+            }
+        }
+
+        &__item {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__mob-right {
+            display: flex !important;
+        }
+    }
+}

@@ -6,7 +6,7 @@
       }
     }
   
-    <main class="main-content flex-column items-center p-main">
+    <main class="main-content flex-column items-center">
       @for (section of page.Sections; track section.id || $index) {
         @if (section.type !== 'header' && section.type !== 'sectionFooter') {
           

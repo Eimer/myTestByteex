@@ -1,0 +1,39 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
+swiper-container {
+    width: 100%;
+    cursor: pointer;
+    // Navigation
+    --swiper-navigation-color: #676869;
+    --swiper-navigation-size: 14px;
+    --swiper-navigation-sides-offset: 10px;
+    
+    // Pagination
+    --swiper-pagination-color: #000000;
+    --swiper-pagination-bullet-inactive-color: #cccccc;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-horizontal-gap: 6px;
+
+    // Active dot
+    --swiper-pagination-color: #000000;
+
+    // Inactive dot
+    --swiper-pagination-bullet-inactive-color: #C4C4C4;
+
+    // Dot size
+    --swiper-pagination-bullet-size: 8px;
+
+    // range between dots
+    --swiper-pagination-bullet-horizontal-gap: 7px;
+
+    // Opasity for inactive dots
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
+
+    &:active {
+        cursor: grabbing;
+    }
+}

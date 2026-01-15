@@ -152,6 +152,16 @@ h2 {
     margin: 0;
 }
 
+h3 {
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24px;
+    color: var(--color-text-header);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
 p {
     font-family: var(--secondary-font);
     font-size: 15px;
@@ -209,11 +219,11 @@ span {
 
 @media screen and (max-width: 768px) {
     .mb-hide {
-        display: none;
+        display: none !important;
     }
 
     .mb-show {
-        display: block;
+        display: block !important;
     }
 
     .btn {
@@ -224,6 +234,11 @@ span {
         text-align: center;
         font-size: var(--mob-text-header-size) !important;
     }
+
+    h3 {
+        text-align: center;
+    }
+    
     p {
         font-size: var(--mob-text-p-size);
         line-height: 18px;

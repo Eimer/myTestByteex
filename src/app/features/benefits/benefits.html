@@ -1,0 +1,69 @@
+<section class="benefits section-wrapper flex-column-center br-bx p-main">
+    <div class="benefits__partners max-width flex-column br-bx">
+        <h2 class="benefits__title t-center">{{data.title}}</h2>
+
+        <div class="mb-show" style="overflow: hidden;">
+            <app-custom-slider [config]="partnersSliderConfig">
+                @for (partner of data.brands; track $index) {
+                <swiper-slide>
+                    <img [src]="partner" class="benefits__partner-img" alt="logo">
+                </swiper-slide>
+                }
+            </app-custom-slider>
+        </div>
+
+
+
+        <div class="benefits__partners-list br-bx flex-row items-center justify-between mb-hide">
+            @for (partner of data.brands; track $index) {
+            <img class="benefits__partner" [src]="partner" alt="partner">
+            }
+        </div>
+
+        <div class="benefits__content flex-row items-center justify-between">
+            <div class="benefits__left flex-column">
+                <h2>{{data.header}}</h2>
+                <div class="benefits__mob-right flex-row mb-show"  style="overflow: hidden;">
+                    <app-custom-slider [config]="previewSliderConfig">
+                        @for (sliderImage of data.sliderImages; track $index) {
+                        <swiper-slide>
+                            <img [src]="sliderImage" class="sliderMobImage" alt="logo">
+                        </swiper-slide>
+                        }
+                    </app-custom-slider>
+                </div>
+                <div class="benefits__left-list flex-column">
+                    
+                    @for(item of data.itemList; track item; let last = $last ) {
+                    <div class="benefits__item flex-row">
+
+                        <img class="benefits__item-img" [src]="item.icon" alt="icon">
+                        <div class="benefits__item-content flex-column">
+                            <h3>{{item.title}}</h3>
+                            <p>{{item.text.content[0].content[0].value}}</p>
+                        </div>
+
+
+                    </div>
+                    @if (!last) {
+                        <div class="delim br-bx mb-show"></div>
+                    }
+                    
+                    }
+                </div>
+            </div>
+
+            <div class="benefits__right flex-row mb-hide"  style="overflow: hidden;">
+                <app-custom-slider [config]="previewSliderConfig">
+                    @for (sliderImage of data.sliderImages; track $index) {
+                    <swiper-slide>
+                        <img [src]="sliderImage" class="sliderImage__img" alt="logo">
+                    </swiper-slide>
+                    }
+                </app-custom-slider>
+            </div>
+
+        </div>
+
+    </div>
+</section>
