@@ -1,0 +1,19 @@
+<section class="final section-wrapper flex-column-center br-bx p-main max-width">
+    <div class="final__content flex-column items-center t-center">
+        <h2>{{data.title}}</h2>
+        <p>{{data.subtitile}}</p>
+        <img [src]="data.image" alt="image">
+    </div>
+    <div class="final__actions flex-column-center mb-show">
+        <div class="final__action flex-row items-center justify-center ">
+            <a class="btn"><span>{{data.textBtn}}</span><img src="/icons/arrow.svg" alt="arrow"></a>
+        </div>
+        <div class="final__tip flex-row items-center justify-center">
+            <div class="final__tip-item flex-row">
+                <img class="final__tip-icon" [src]="data.iconTip" alt="icon">
+                <span>{{data.paymentsTip}}</span>
+            </div>
+            <img class="final__tip-payment" [src]="data.payments" alt="icon">
+        </div>
+    </div>
+</section>
