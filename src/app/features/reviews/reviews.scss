@@ -1,0 +1,79 @@
+:host {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.reviews {
+    gap: 55px;
+
+    &__content {
+        gap: 55px;
+        max-width: 615px;
+    }
+    &__galery {
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__galery-img {
+        width: 128px;
+        height: 128px;
+    }
+
+    &__cards {
+        width: 100%;
+        max-width: 80vw;
+    }
+    &__card {
+        border: 1px solid #EAEAEA;
+        padding: 25px 30px;
+        gap: 12px;
+        max-width: 338px;
+        box-shadow: 0px 3px 10px 1px #00000014;
+        border-radius: 8px;
+    }
+
+    &__card-header {
+        gap: 13px;
+    }
+
+    &__mob-cards {
+        display: none !important;
+    }
+
+    &__actions {
+        gap: 11px;
+    }
+
+    &__tip {
+        gap: 11px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .reviews {
+
+        &__galery-img {
+            width: 102px;
+            height: 102px;
+        }
+
+        &__cards {
+            display: none !important;
+        }
+        
+        &__cards {
+            display: none !important;
+        }
+
+        &__mob-cards {
+            display: flex !important;
+        }
+
+
+    }
+}

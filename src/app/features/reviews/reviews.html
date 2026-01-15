@@ -1,0 +1,71 @@
+<section class="reviews section-wrapper flex-column-center br-bx p-main">
+    <div class="reviews__content max-width flex-column t-center">
+        <h2>{{data.title}}</h2>
+        <p>{{data.subtitile}}</p>
+    </div>
+
+    <div class="reviews__galery flex-row">
+        @for(image of data.images; track image) {
+        <img class="reviews__galery-img" [src]="image" alt="image">
+        }
+    </div>
+
+    <div class="reviews__cards flex-row" style="overflow: hidden;">
+        <app-custom-slider [config]="sliderConfig">
+            @for (card of data.cards; track $index) {
+            <swiper-slide>
+                <div class="reviews__card flex-column br-bx">
+                    <div class="reviews__card-header flex-row">
+                        <div class="reviews__card-icon">
+                            <img [src]="card.icon" alt="icon">
+                        </div>
+                        <div class="reviews__title flex-column">
+                            <app-stars></app-stars>
+                            <p>{{card.title}}</p>
+                        </div>
+                    </div>
+
+                    <div class="reviews__card-content">
+                        <span>{{card.text}}</span>
+                    </div>
+                </div>
+            </swiper-slide>
+            }
+        </app-custom-slider>
+    </div>
+
+    <div class="reviews__cards reviews__mob-cards flex-row" style="overflow: hidden;">
+        <app-custom-slider [config]="sliderMobileConfig">
+            @for (card of data.cards; track $index) {
+            <swiper-slide>
+                <div class="reviews__card flex-column br-bx">
+                    <div class="reviews__card-header flex-row">
+                        <div class="reviews__card-icon">
+                            <img [src]="card.icon" alt="icon">
+                        </div>
+                        <div class="reviews__title flex-column">
+                            <app-stars></app-stars>
+                            <p>{{card.title}}</p>
+                        </div>
+                    </div>
+
+                    <div class="reviews__card-content">
+                        <span>{{card.text}}</span>
+                    </div>
+                </div>
+            </swiper-slide>
+            }
+        </app-custom-slider>
+    </div>
+
+    <div class="reviews__actions flex-column max-width items-center">
+        <div class="reviews__action flex-row items-center max-width justify-center">
+            <a class="btn"><span>{{data.textBtn}}</span><img src="/icons/arrow.svg" alt="arrow"></a>
+        </div>
+        <div class="reviews__tip flex-row items-center items-center justify-center">
+            <app-stars></app-stars>
+            <span>{{data.bottomText}}</span>
+        </div>
+    </div>
+
+</section>

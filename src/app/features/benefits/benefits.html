@@ -52,13 +52,16 @@
                     }
                 </div>
 
-                <div class="benefits__action flex-row items-center mb-show">
-                    <a class="btn"><span>{{data.titlebtn}}</span><img src="/icons/arrow.svg" alt="arrow"></a>
+                <div class="benefits__actions mb-show">
+                    <div class="benefits__action flex-row items-center ">
+                        <a class="btn"><span>{{data.titlebtn}}</span><img src="/icons/arrow.svg" alt="arrow"></a>
+                    </div>
+                    <div class="benefits__tip flex-row items-center items-center justify-center">
+                        <app-stars></app-stars>
+                        <span>{{data.subtitile}}</span>
+                    </div>
                 </div>
-                <div class="benefits__tip flex-row items-center mb-show items-center justify-center">
-                    <app-stars></app-stars>
-                    <span>{{data.subtitile}}</span>
-                </div>
+
 
             </div>
 
