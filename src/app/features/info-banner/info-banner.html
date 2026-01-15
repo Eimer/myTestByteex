@@ -1,0 +1,24 @@
+<section class="info section-wrapper flex-column-center br-bx p-main">
+    <div class="info__content flex-column max-width items-center">
+        <h2>{{data.title}}</h2>
+        <div class="info__items flex-row justify-center">
+            @for( item of data.items; track item; let i = $index; let first = $first; let count = $count) {
+                <div class="info__item flex-column items-center">
+                    <img class="info__item-img" [src]="item.image" alt="image">
+                    <p class="info__item-title">{{item.title}}</p>
+                    <p class="info__item-subtitle">{{item.subtitile}}</p>
+                </div>
+
+                @if (first) {
+                    <div class="delim"></div>
+                }
+        
+                @if (i === count - 2) {
+                    <div class="delim"></div>
+                }
+                
+            }
+
+        </div>
+    </div>
+</section>
