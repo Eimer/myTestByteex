@@ -1,0 +1,48 @@
+<section class="faq section-wrapper flex-column-center br-bx p-main">
+    <div class="faq__content flex-row justify-between max-width items-center">
+        <div class="faq__left">
+            <h2 class="faq__title">{{data.title}}</h2>
+            <div class="faq__accordion flex-column">
+                <div class="delim"></div>
+                @for (item of data.items; track $index; let last = $last) {
+                <div class="accordion__item" [class.accordion__item--active]="activeIndex === $index">
+
+                    <div class="accordion__header flex-row items-center justify-between">
+                        <h3 class="accordion__question">{{item.title}}</h3>
+
+                        <button class="accordion__toggle-btn flex-row items-center justify-center"
+                            (click)="toggleAccordion($index)">
+                            <span class="accordion__icon-text">
+                                {{ activeIndex === $index ? '−' : '+' }}
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="accordion__collapse">
+                        <div class="accordion__body">
+                            <p>{{item.text}}</p>
+                        </div>
+                    </div>
+
+                    <div class="delim"></div>
+                </div>
+                }
+            </div>
+            <div class="faq__actions flex-column-center mb-show">
+                <div class="faq__action flex-row items-center justify-center ">
+                    <a class="btn"><span>{{data.titlebtn}}</span><img src="/icons/arrow.svg" alt="arrow"></a>
+                </div>
+                <div class="faq__tip flex-row items-center justify-center">
+                    <app-stars></app-stars>
+                    <span>{{data.subtitile}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="faq__right flex-column items-center mb-hide">
+            <img [src]="data.image[0]" alt="img">
+        </div>
+
+
+
+    </div>
+</section>
