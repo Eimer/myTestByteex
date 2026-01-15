@@ -8,7 +8,8 @@
 .final {
     padding-top: 88px;
     padding-bottom: 88px;
-
+    margin-bottom: -350px;
+    z-index: 1;
     &__content {
         gap: 20px;
     }
